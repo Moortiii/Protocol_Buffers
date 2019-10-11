@@ -72,13 +72,20 @@ Now we can create messages with `Boards` allowing us to send multiple `Squares` 
 
 ## Using Protocol Buffer Messages
 
-### Creating an instance of a message in Python
+### Generating the necessary classes
 
-We can create instances of our Protocol Buffer Messages and write them to a `file` or `stream`, this allows us to share them with other applications. In order to do so, we need to generate language-specific classes for our `.proto` file. The protocol buffer compiler, `protoc` allows us to create classes for the following languages
+We can create instances of our Protocol Buffer Messages and write them to a `file` or `stream`, this allows us to share them with other applications. In order to do so, we need to generate language-specific classes for our `.proto` file. The protocol buffer compiler, `protoc` allows us to create classes for the following languages:
 
-Protocol Buffer Messages alone are useless, we need some way to use these messages in our application and some way to write them to a `file` or `stream` so that they can be shared. This is where the `Protocol Buffer Compiler` comes in.
+1. Python
+2. Java
+3. Go
+4. C++
+5. C#
+6. Dart
 
-There are bindings for the Protocol Buffer Compiler for multiple languages, such as Python, Java, Scala, Go, C++, C# and Dart. This allows you to specify the location of your `.proto` file and which language you want to output classes for. Here's an example
+Assume we have the following file structure:
+```
+```
 
 `protoc -I=. --python_out=. board.proto`
 
@@ -120,5 +127,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTU2NTQyMjksLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbMzI4Mzk4MjQ2LC02OTY3NjUzMzVdfQ==
 -->
