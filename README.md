@@ -6,9 +6,9 @@
 In short, Protocol Buffers allow us to write `messages` in order to send structured data to programs written in different languages. We can define our structure *once* in a `.proto` file and use this to generate the necessary classes in the respective languages. This is useful for integrating software written different languages and can serve as a replacement for `JSON`, `XML` or other data-formats that allow us to send information between different programs.
 
 ## Protocol Buffer Messages
-Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforwadr
+Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforward. Messages are defined in blocks prefixed with the keyword `Message` followed by the name of the message, note that this name is case-sensitive.
 
-You, as the author, decide how you want your data to be structured. Let's look at an example:
+Variables are defined using a type 
 
 ````java #use java to get some syntax highlighting
 syntax="proto3";
@@ -108,5 +108,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbLTE1NDA0MjkwMTUsLTY5Njc2NTMzNV19
 -->
