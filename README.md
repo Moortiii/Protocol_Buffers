@@ -84,12 +84,17 @@ We can create instances of our Protocol Buffer Messages and write them to a `fil
 6. Dart
 
 Assume we have the following file structure:
-```
-```
+````
+project/
+    - board.proto
+    - main.py
+````
+
+We can then type the following command to generate a `board_pb2.py` file using `protoc`:
 
 `protoc -I=. --python_out=. board.proto`
 
-This example assumes the `board.proto` file is present in the current directory, then takes this file and outputs classes in the current directory that will allow you to read and write Protocol Buffer Messages. More information on the generated classes can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated).
+We will see an example on how to use this generated file, but more information on the generation can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated).
 
 Now let's look at an example of writing a protocol buffer message in Python and writing the result to a file. We'll continue to use our example of Squares. Once you run the `protoc` command to generate the necessary classes you should have a file named `board_pb2.py`
 
@@ -127,5 +132,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI4Mzk4MjQ2LC02OTY3NjUzMzVdfQ==
+eyJoaXN0b3J5IjpbLTM5Njc1ODA3NywtNjk2NzY1MzM1XX0=
 -->
