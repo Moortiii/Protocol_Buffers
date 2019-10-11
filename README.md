@@ -94,7 +94,7 @@ We can then type the following command to generate a `board_pb2.py` file using `
 
 `protoc -I=. --python_out=. board.proto`
 
-We will see an example on how to use this generated file, but more information on the generation can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated).
+More information on the generation can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated).
 
 Now let's look at an example of writing a protocol buffer message in Python and writing the result to a file. We'll continue to use our example of Squares. Once you run the `protoc` command to generate the necessary classes you should have a file named `board_pb2.py`
 
@@ -132,5 +132,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5Njc1ODA3NywtNjk2NzY1MzM1XX0=
+eyJoaXN0b3J5IjpbMTU3NTUzNzg0OCwtNjk2NzY1MzM1XX0=
 -->
