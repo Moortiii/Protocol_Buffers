@@ -136,8 +136,15 @@ with open("output.bin", "wb") as f:
 
 Now that we have generated a binary file we can parse it again using a different language. For this example we will use Scala and need to download and install the `ScalaPBC` plugin first.
 
-````
-sudo apt install 
+First, ensure an up-to-date version of Java is installed as this is required by `ScalaPBC`.
+
+```
+sudo apt install openjdk-11-jre-headless
+sudo apt install openjdk-11-jre
+sudo apt install openjdk-11-jdk
+```
+
+Second, download the current version of `ScalaPBC` from the [following link]()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAwNzY2NDk3LC02OTY3NjUzMzVdfQ==
+eyJoaXN0b3J5IjpbLTE4MTY1NTAwMzMsLTY5Njc2NTMzNV19
 -->
