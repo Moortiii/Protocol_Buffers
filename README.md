@@ -7,7 +7,7 @@ In short, Protocol Buffers allow us to write `messages` in order to send structu
 
 ## Protocol Buffer Messages
 
-## 
+### Writing a message
 Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforward. Messages are defined in blocks prefixed with the keyword `Message` followed by the name of the message, note that this name is case-sensitive.
 
 Variables are defined using a `variable type`, a `name` and an `identifier`.
@@ -27,9 +27,9 @@ message Square {
 
 `Identifiers` have to be unique for their messages and are used for the encoding and decoding of the resulting serialized output. The next field added to this message would have the `identifier` of `3`.
 
+### Extending a message
 
-
-Now, let's say that this definition of a square isn't sufficient and that we need more information, such as the color of the square. We can simply extend the message!
+Now, let's say that it turns out that this definition of a square isn't sufficient for our needs and that we need more information. Perhaps we need to include the color of the square as well? In that case we can simply extend the message.
 
 ````java #use java to get some syntax highlighting
 // Filename: board.proto
@@ -45,7 +45,7 @@ message Square {
 }
 ````
 
-Now we have sufficient information to say where a given square is located, as well as define it's RGB color. Note that Protocol Buffers are backwards-compatible. If you add a new field to an existing Protocol Buffer Message, programs that read the old structure will simply ignore the new fields. More information about this and the rules you need to follow can be found [here](https://developers.google.com/protocol-buffers/docs/javatutorial#extending-a-protocol-buffer).
+Protocol Buffers are backwards-compatible. If you add a new field to an existing Protocol Buffer Message, programs that read the old structure will simply ignore the new fields. More information about this and the rules you need to follow can be found [here](https://developers.google.com/protocol-buffers/docs/javatutorial#extending-a-protocol-buffer).
 
 ### Repeated Message Fields
 A lot of information can be structured using simple data types such as integers and booleans, but this is not always sufficient. When using Protocol Buffers, you will quickly see the need for a way to send `arrays` or `lists` of information. Luckily, Protocol Buffers have built-in support for this using the `repeated` keyword. Let's look at an example.
@@ -116,5 +116,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTkzMDgwNywtNjk2NzY1MzM1XX0=
+eyJoaXN0b3J5IjpbLTEzNDMyMDM2MywtNjk2NzY1MzM1XX0=
 -->
