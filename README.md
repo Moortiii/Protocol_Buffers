@@ -136,7 +136,7 @@ with open("output.bin", "wb") as f:
 
 Now that we have generated a binary file we can parse it again using a different language. For this example we will use Scala and need to download and install the `ScalaPBC` plugin first.
 
-First, ensure an up-to-date version of Java is installed as this is required by `ScalaPBC`.
+1. ensure an up-to-date version of Java is installed as this is required by `ScalaPBC`.
 
 ```
 sudo apt install openjdk-11-jre-headless
@@ -144,7 +144,11 @@ sudo apt install openjdk-11-jre
 sudo apt install openjdk-11-jdk
 ```
 
-Second, download the current version of `ScalaPBC` from the [following link]()
+2. Download the current version of `ScalaPBC` from the [following link](https://github.com/scalapb/ScalaPB/releases) and extract it to a directory.
+
+3. Generate the scala classes using the protoc compiler and the `--plugin` flag.
+
+	`protoc neighbors.proto --plugin=./protoc-gen-scala --scala_out=.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTY1NTAwMzMsLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbMTU2NTk3NTc4MywtNjk2NzY1MzM1XX0=
 -->
