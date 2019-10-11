@@ -5,7 +5,7 @@
 ### What are protocol buffers?
 In short, Protocol Buffers allow us to write `messages` in order to send structured data to programs written in different languages. We can define our structure *once* in a `.proto` file and use this to generate the necessary classes in the respective languages. This is useful for integrating software written different languages and can serve as a replacement for `JSON`, `XML` or other data-formats that allow us to send information between different programs.
 
-## Protocol Buffer Messages
+## Creating Protocol Buffer Messages
 
 ### Writing a message
 Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforward. Messages are defined in blocks prefixed with the keyword `Message` followed by the name of the message, note that this name is case-sensitive.
@@ -47,7 +47,7 @@ message Square {
 
 Protocol Buffers are backwards-compatible. If you add a new field to an existing Protocol Buffer Message, programs that read the old structure will simply ignore the new fields. More information about this and the rules you need to follow can be found [here](https://developers.google.com/protocol-buffers/docs/javatutorial#extending-a-protocol-buffer).
 
-### Repeated Message Fields
+### Sending lists of data
 A lot of information can be structured using simple data types such as integers and booleans, but this is not always sufficient. When using Protocol Buffers, you will quickly see the need for a way to send `arrays` or `lists` of information. Luckily, Protocol Buffers have built-in support for this using the `repeated` keyword. Let's look at an example.
 
 ````java
@@ -70,8 +70,11 @@ message Board {
 
 Now we can create messages with `Boards` allowing us to send multiple `Squares` at once!
 
-### Writing Messages
+## Using Protocol Buffer Messages
 
+### Creating an instance of a message in Python
+
+We can create instances of our Protocol Buffer Messages and 
 Protocol Buffer Messages alone are useless, we need some way to use these messages in our application and some way to write them to a `file` or `stream` so that they can be shared. This is where the `Protocol Buffer Compiler` comes in.
 
 There are bindings for the Protocol Buffer Compiler for multiple languages, such as Python, Java, Scala, Go, C++, C# and Dart. This allows you to specify the location of your `.proto` file and which language you want to output classes for. Here's an example
@@ -116,5 +119,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDMyMDM2MywtNjk2NzY1MzM1XX0=
+eyJoaXN0b3J5IjpbLTEzMjQ2MTM1MzEsLTY5Njc2NTMzNV19
 -->
