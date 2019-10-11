@@ -8,16 +8,20 @@ In short, Protocol Buffers allow us to write `messages` in order to send structu
 ## Protocol Buffer Messages
 Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforward. Messages are defined in blocks prefixed with the keyword `Message` followed by the name of the message, note that this name is case-sensitive.
 
-Variables are defined using a type 
+Variables are defined using a `variable type`, a `name` and an `identifier`.
 
-````java #use java to get some syntax highlighting
+``java #use java to get some syntax highlighting
 syntax="proto3";
 
 message Square {
     int32 x = 1;
     int32 y = 2;
+
+    // int32 = variable type
+    // x     = name
+    // 1     = identifier
 }
-````
+``
 
 This definition allows us to write messages containing information about squares, in this case where they are located in some imagined grid. The numbers given for `x` and `y` are **not** values. They simply serve as identifiers and are used for the encoding and decoding of the messages. This is not something you handle yourself, but is built into the protocol buffer compiler. Numbers **have** to be unique for their given message, therefore the next field added to this message would have the number `3` as an identifier.
 
@@ -108,5 +112,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA0MjkwMTUsLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbMTYxNjE4NzI4MCwtNjk2NzY1MzM1XX0=
 -->
