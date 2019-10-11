@@ -90,11 +90,11 @@ project/
     - main.py
 ````
 
-We can then type the following command to generate a `board_pb2.py` file using `protoc`:
+We can then type the following command to generate a `board_pb2.py` file in the current directory using `protoc`:
 
 `protoc -I=. --python_out=. board.proto`
 
-More information on the generation can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated).
+More information on the generation can be found [here](https://developers.google.com/protocol-buffers/docs/reference/java-generated). It is also possible to specify a path to the `.proto` file using the `--proto_path=` argument.
 
 ### Creating instances of Protocol Buffer Messages in Python
 
@@ -130,9 +130,9 @@ with open("output.bin", "wb") as f:
     f.write(board.SerializeToString())
 ````
 
-Note: Protocol Buffers are neat in the sense that you can print their values directly in several languages, this is useful if you want to verify that you've assigned the correct information before serializing the messages.
+*Note*: Protocol Buffers are neat in the sense that you can print their values directly in several languages, this is useful if you want to verify that you've assigned the correct information before serializing the messages.
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjA2OTY4MzcsLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbLTE3MjkzODkyMTksLTY5Njc2NTMzNV19
 -->
