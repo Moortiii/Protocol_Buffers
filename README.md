@@ -146,9 +146,9 @@ Now that we have generated a binary file we can parse it again using a different
 
 2. Download the current version of `ScalaPBC` from the [following link](https://github.com/scalapb/ScalaPB/releases) and extract it to a directory.
 
-3. Generate the scala classes using the protoc compiler and the `--plugin` flag.
+3. Generate the scala classes using the protoc compiler and the `--plugin` flag. Note that this will output the generated class to the current directory. Either specify the correct directory in the `--scala_out` flag or navigate to the correct directory b
 
-	`protoc neighbors.proto --plugin=./protoc-gen-scala --scala_out=.`
+	`protoc neighbors.proto --plugin=/path/to/bin/protoc-gen-scala --scala_out=.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTQ5NTE0NzMsLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbLTE3Mjg3MjU4NzEsLTY5Njc2NTMzNV19
 -->
