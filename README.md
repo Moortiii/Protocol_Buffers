@@ -132,7 +132,12 @@ with open("output.bin", "wb") as f:
 
 *Note*: Protocol Buffers are neat in the sense that you can print their values directly in several languages, this is useful if you want to verify that you've assigned the correct information before serializing the messages.
 
-### Reading Messages in a different language
+### Reading Protocol Buffer Messages in a different language
+
+Now that we have generated a binary file we can parse it again using a different language. For this example we will use Scala and need to download and install the `ScalaPBC` plugin first.
+
+````
+sudo apt install 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjkzODkyMTksLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbNTAwNzY2NDk3LC02OTY3NjUzMzVdfQ==
 -->
