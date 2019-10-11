@@ -132,7 +132,7 @@ with open("output.bin", "wb") as f:
 
 *Note*: Protocol Buffers are neat in the sense that you can print their values directly in several languages, this is useful if you want to verify that you've assigned the correct information before serializing the messages.
 
-### Reading Protocol Buffer Messages in a different language
+### Generating Protocol Buffer Message classes for Scala
 
 Now that we have generated a binary file we can parse it again using a different language. For this example we will use Scala and need to download and install the `ScalaPBC` plugin first.
 
@@ -146,9 +146,9 @@ Now that we have generated a binary file we can parse it again using a different
 
 2. Download the current version of `ScalaPBC` from the [following link](https://github.com/scalapb/ScalaPB/releases) and extract it to a directory.
 
-3. Generate the scala classes using the protoc compiler and the `--plugin` flag. Note that this will output the generated class to the current directory. Either specify the correct directory in the `--scala_out` flag or navigate to the correct directory b
+3. Generate the scala classes using the protoc compiler and the `--plugin` flag. Note that this will output the generated class to the current directory. Either specify the correct directory in the `--scala_out` flag or navigate to the correct directory before running the command.
 
 	`protoc neighbors.proto --plugin=/path/to/bin/protoc-gen-scala --scala_out=.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mjg3MjU4NzEsLTY5Njc2NTMzNV19
+eyJoaXN0b3J5IjpbLTg2NzAzNTI1NiwtNjk2NzY1MzM1XX0=
 -->
