@@ -6,24 +6,28 @@
 In short, Protocol Buffers allow us to write `messages` in order to send structured data to programs written in different languages. We can define our structure *once* in a `.proto` file and use this to generate the necessary classes in the respective languages. This is useful for integrating software written different languages and can serve as a replacement for `JSON`, `XML` or other data-formats that allow us to send information between different programs.
 
 ## Protocol Buffer Messages
+
+## 
 Protocol Buffer Messages are structured blocks of data. The rules of messages are relatively straightforward. Messages are defined in blocks prefixed with the keyword `Message` followed by the name of the message, note that this name is case-sensitive.
 
 Variables are defined using a `variable type`, a `name` and an `identifier`.
 
-``java #use java to get some syntax highlighting
+````java #use java to get some syntax highlighting
 syntax="proto3";
+
+// int32 = variable type
+// x     = name
+// 1     = identifier
 
 message Square {
     int32 x = 1;
     int32 y = 2;
-
-    // int32 = variable type
-    // x     = name
-    // 1     = identifier
 }
-``
+````
 
-This definition allows us to write messages containing information about squares, in this case where they are located in some imagined grid. The numbers given for `x` and `y` are **not** values. They simply serve as identifiers and are used for the encoding and decoding of the messages. This is not something you handle yourself, but is built into the protocol buffer compiler. Numbers **have** to be unique for their given message, therefore the next field added to this message would have the number `3` as an identifier.
+`Identifiers` have to be unique for their messages and are used for the encoding and decoding of the resulting serialized output. The next field added to this message would have the `identifier` of `3`.
+
+
 
 Now, let's say that this definition of a square isn't sufficient and that we need more information, such as the color of the square. We can simply extend the message!
 
@@ -112,5 +116,5 @@ Note: Protocol Buffers are neat in the sense that you can print their values dir
 
 ### Reading Messages in a different language
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjE4NzI4MCwtNjk2NzY1MzM1XX0=
+eyJoaXN0b3J5IjpbLTE1NTkzMDgwNywtNjk2NzY1MzM1XX0=
 -->
