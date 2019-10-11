@@ -138,11 +138,11 @@ Now that we have generated a binary file we can parse it again using a different
 
 1. ensure an up-to-date version of Java is installed as this is required by `ScalaPBC`.
 
-```
-sudo apt install openjdk-11-jre-headless
-sudo apt install openjdk-11-jre
-sudo apt install openjdk-11-jdk
-```
+	```
+	sudo apt install openjdk-11-jre-headless
+	sudo apt install openjdk-11-jre
+	sudo apt install openjdk-11-jdk
+	```
 
 2. Download the current version of `ScalaPBC` from the [following link](https://github.com/scalapb/ScalaPB/releases) and extract it to a directory.
 
@@ -150,5 +150,5 @@ sudo apt install openjdk-11-jdk
 
 	`protoc neighbors.proto --plugin=./protoc-gen-scala --scala_out=.`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NTk3NTc4MywtNjk2NzY1MzM1XX0=
+eyJoaXN0b3J5IjpbLTEzMTQ5NTE0NzMsLTY5Njc2NTMzNV19
 -->
